@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-attachment: fixed;
+}
+
+/* Body and Header Styles */
+body {
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      306deg,
+      rgba(54, 54, 54, 0.05) 0%,
+      rgba(54, 54, 54, 0.05) 33.333%,
+      rgba(85, 85, 85, 0.05) 33.333%,
+      rgba(85, 85, 85, 0.05) 66.666%,
+      rgba(255, 255, 255, 0.05) 66.666%,
+      rgba(255, 255, 255, 0.05) 99.999%
+    ),
+    linear-gradient(
+      353deg,
+      rgba(81, 81, 81, 0.05) 0%,
+      rgba(81, 81, 81, 0.05) 33.333%,
+      rgba(238, 238, 238, 0.05) 33.333%,
+      rgba(238, 238, 238, 0.05) 66.666%,
+      rgba(32, 32, 32, 0.05) 66.666%,
+      rgba(32, 32, 32, 0.05) 99.999%
+    ),
+    linear-gradient(
+      140deg,
+      rgba(192, 192, 192, 0.05) 0%,
+      rgba(192, 192, 192, 0.05) 33.333%,
+      rgba(109, 109, 109, 0.05) 33.333%,
+      rgba(109, 109, 109, 0.05) 66.666%,
+      rgba(30, 30, 30, 0.05) 66.666%,
+      rgba(30, 30, 30, 0.05) 99.999%
+    ),
+    linear-gradient(
+      189deg,
+      rgba(77, 77, 77, 0.05) 0%,
+      rgba(77, 77, 77, 0.05) 33.333%,
+      rgba(55, 55, 55, 0.05) 33.333%,
+      rgba(55, 55, 55, 0.05) 66.666%,
+      rgba(145, 145, 145, 0.05) 66.666%,
+      rgba(145, 145, 145, 0.05) 99.999%
+    ),
+    linear-gradient(90deg, rgb(9, 201, 186), rgb(18, 131, 221));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  background-color: #37b7c3;
+  height: 60px;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease-in-out;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #071952;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul a:hover {
+  color: #fff;
+}
+
+.header-text {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Add this CSS to your existing stylesheet */
+.header-text h1 {
+  font-size: 5.5rem;
+  color: #fff;
+  background-image: linear-gradient(0deg, #fff, #fff); /* Initial white color */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background-position 5s ease;
+}
+
+.header-text h1 img {
+  height: auto;
+  width: 60px;
+  animation: tilt 2s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes tilt {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Section Styles */
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.section-1 {
+  background-image: linear-gradient(
+      146deg,
+      rgba(44, 35, 109, 0.5) 0%,
+      rgba(44, 35, 109, 0.5) 14.286%,
+      rgba(64, 54, 108, 0.5) 14.286%,
+      rgba(64, 54, 108, 0.5) 28.572%,
+      rgba(83, 72, 106, 0.5) 28.572%,
+      rgba(83, 72, 106, 0.5) 42.858%,
+      rgba(103, 91, 105, 0.5) 42.858%,
+      rgba(103, 91, 105, 0.5) 57.144%,
+      rgba(123, 110, 103, 0.5) 57.144%,
+      rgba(123, 110, 103, 0.5) 71.43%,
+      rgba(142, 128, 102, 0.5) 71.43%,
+      rgba(142, 128, 102, 0.5) 85.716%,
+      rgba(162, 147, 100, 0.5) 85.716%,
+      rgba(162, 147, 100, 0.5) 100.002%
+    ),
+    linear-gradient(
+      349deg,
+      rgb(203, 4, 7) 0%,
+      rgb(203, 4, 7) 14.286%,
+      rgb(178, 9, 6) 14.286%,
+      rgb(178, 9, 6) 28.572%,
+      rgb(152, 13, 5) 28.572%,
+      rgb(152, 13, 5) 42.858%,
+      rgb(127, 18, 4) 42.858%,
+      rgb(127, 18, 4) 57.144%,
+      rgb(101, 22, 3) 57.144%,
+      rgb(101, 22, 3) 71.43%,
+      rgb(76, 27, 2) 71.43%,
+      rgb(76, 27, 2) 85.716%,
+      rgb(50, 31, 1) 85.716%,
+      rgb(50, 31, 1) 100.002%
+    );
+  color: #fff;
+}
+
+.section-2 {
+  background-image: linear-gradient(
+      41deg,
+      rgba(51, 33, 28, 0.5) 0%,
+      rgba(51, 33, 28, 0.5) 14.286%,
+      rgba(67, 67, 39, 0.5) 14.286%,
+      rgba(67, 67, 39, 0.5) 28.572%,
+      rgba(83, 101, 49, 0.5) 28.572%,
+      rgba(83, 101, 49, 0.5) 42.858%,
+      rgba(99, 136, 60, 0.5) 42.858%,
+      rgba(99, 136, 60, 0.5) 57.144%,
+      rgba(114, 170, 71, 0.5) 57.144%,
+      rgba(114, 170, 71, 0.5) 71.43%,
+      rgba(130, 204, 81, 0.5) 71.43%,
+      rgba(130, 204, 81, 0.5) 85.716%,
+      rgba(146, 238, 92, 0.5) 85.716%,
+      rgba(146, 238, 92, 0.5) 100.002%
+    ),
+    linear-gradient(
+      303deg,
+      rgb(234, 199, 114) 0%,
+      rgb(234, 199, 114) 14.286%,
+      rgb(233, 174, 115) 14.286%,
+      rgb(233, 174, 115) 28.572%,
+      rgb(233, 149, 116) 28.572%,
+      rgb(233, 149, 116) 42.858%,
+      rgb(232, 125, 118) 42.858%,
+      rgb(232, 125, 118) 57.144%,
+      rgb(231, 100, 119) 57.144%,
+      rgb(231, 100, 119) 71.43%,
+      rgb(231, 75, 120) 71.43%,
+      rgb(231, 75, 120) 85.716%,
+      rgb(230, 50, 121) 85.716%,
+      rgb(230, 50, 121) 100.002%
+    );
+}
+
+.section-3 {
+  background-image: linear-gradient(200deg, rgba(234, 211, 72, 0.5) 0%, rgba(234, 211, 72, 0.5) 14.286%,rgba(231, 195, 88, 0.5) 14.286%, rgba(231, 195, 88, 0.5) 28.572%,rgba(229, 180, 103, 0.5) 28.572%, rgba(229, 180, 103, 0.5) 42.858%,rgba(226, 164, 119, 0.5) 42.858%, rgba(226, 164, 119, 0.5) 57.144%,rgba(223, 148, 135, 0.5) 57.144%, rgba(223, 148, 135, 0.5) 71.43%,rgba(221, 133, 150, 0.5) 71.43%, rgba(221, 133, 150, 0.5) 85.716%,rgba(218, 117, 166, 0.5) 85.716%, rgba(218, 117, 166, 0.5) 100.002%),linear-gradient(194deg, rgb(244, 174, 154) 0%, rgb(244, 174, 154) 14.286%,rgb(218, 151, 157) 14.286%, rgb(218, 151, 157) 28.572%,rgb(192, 129, 160) 28.572%, rgb(192, 129, 160) 42.858%,rgb(167, 106, 163) 42.858%, rgb(167, 106, 163) 57.144%,rgb(141, 83, 165) 57.144%, rgb(141, 83, 165) 71.43%,rgb(115, 61, 168) 71.43%, rgb(115, 61, 168) 85.716%,rgb(89, 38, 171) 85.716%, rgb(89, 38, 171) 100.002%);
+}
+.section-2 span,
+.section-3 span{
+  font-size: 5rem;
+  color: whitesmoke;
+  text-shadow: -6px 3px 16px #000;
+}
+.section-2 span{
+  color: #000 ;
+}
+
+/* Span Styles */
+section span {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 20px;
+}
+
+#organization-name {
+  color: #ffdf00;
+  font-weight: 600;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header-text h1 {
+    font-size: 4rem;
+  }
+
+  section span {
+    font-size: 2rem;
+  }
+
+  nav ul a {
+    padding: 5px 15px;
+  }
+}
